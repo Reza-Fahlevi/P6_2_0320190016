@@ -1,0 +1,51 @@
+﻿@model IEnumerable<P6_2_0320190016.Models.Mahasiswa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alamat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tgl_lahir)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alamat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tgl_lahir)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.nim }) |
+            @Html.ActionLink("Details", "Details", new { id=item.nim }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.nim })
+        </td>
+    </tr>
+}
+
+</table>

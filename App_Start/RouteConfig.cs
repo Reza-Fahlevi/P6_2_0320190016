@@ -16,7 +16,7 @@ namespace P6_2_0320190016
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Mahasiswas16", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
